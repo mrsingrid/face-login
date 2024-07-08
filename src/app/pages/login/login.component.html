@@ -1,0 +1,27 @@
+<main class="login">
+    <section class="login__box login__form">
+        <h1 class="login__title login__text--black">Sign in</h1>
+
+        <button class="login__facial-recognition-button login__text login__text--white" (click)="initCameraStream()" *ngIf="!recording">
+            Facil Recognition
+        </button>
+
+        <canvas width="500" height="380" #canvas hidden></canvas>
+
+        <div class="login__facial-shape" [hidden]="!recording">
+            <video class="login__facial-shape-video" autoplay #video></video>
+        </div>
+       
+
+        <button class="login__facial-recognition-button login__text login__text--white" (click)="capture($event)" *ngIf="recording">
+            Capture
+        </button>
+    </section>
+
+    <section class="login__box login__message">
+        <h2 class="login__title login__text--white">Hello, Friend!</h2>
+        <p class="login__text login__text--white">
+            Enter your personal details and start journey with us
+        </p>
+    </section>
+</main>

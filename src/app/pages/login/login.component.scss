@@ -1,0 +1,81 @@
+.login {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.login__box {
+    display: flex;
+    flex-direction: column;
+    padding: 3.0rem;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    gap: 2rem;
+}
+
+.login__form {
+    display: flex;
+    background: #fff;
+
+    @media (max-width: 600px) {
+        width: 100%;
+    }
+}
+
+.login__message {
+    display: flex;
+    background:#3c97bf;
+    text-align: center;
+
+    @media (max-width: 600px) {
+        display: none;
+    }
+}
+
+.login__title {
+    font-size: 3.2rem;
+    font-weight: bold;
+}
+
+.login__text {
+    font-size: 1.6rem;
+}
+
+
+.login__text--white {
+    color: white;
+}
+
+.login__text--black {
+    color: black;
+}
+
+.login__facial-recognition-button {
+    padding: 1.6rem;
+    background: #3c97bf;
+    border-radius: 2.4rem;
+    cursor: pointer;
+    border: none;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.login__facial-shape {
+    position: relative;
+    width: 20rem;
+    height: 30rem;
+    border-radius: 50%;
+    background: blue;
+    -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
+}
+
+.login__facial-shape-video {
+    position: absolute;
+    width: 40rem;
+    height: 50rem;
+    top: -100px;
+    left: -100px;
+}
